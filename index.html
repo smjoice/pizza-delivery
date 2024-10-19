@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Delivery</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Shopping Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Our Pizza Menu</h2>
+        <div class="pizza-item" data-name="Margherita" data-price="12">
+            <h3>Margherita</h3>
+            <p>Price: $12</p>
+            <button onclick="addToCart('Margherita', 12)">Add to Cart</button>
+        </div>
+
+        <div class="pizza-item" data-name="Pepperoni" data-price="14">
+            <h3>Pepperoni</h3>
+            <p>Price: $14</p>
+            <button onclick="addToCart('Pepperoni', 14)">Add to Cart</button>
+        </div>
+
+        <div class="pizza-item" data-name="Hawaiian" data-price="15">
+            <h3>Hawaiian</h3>
+            <p>Price: $15</p>
+            <button onclick="addToCart('Hawaiian', 15)">Add to Cart</button>
+        </div>
+
+        <div class="pizza-item" data-name="Veggie" data-price="13">
+            <h3>Veggie</h3>
+            <p>Price: $13</p>
+            <button onclick="addToCart('Veggie', 13)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items">
+            <p>No items in cart.</p>
+        </div>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0</span></strong>
+        </div>
+        <button id="checkout" onclick="checkout()">Checkout</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
